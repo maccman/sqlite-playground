@@ -10,6 +10,7 @@ import SQLiteESMFactory from '@vlcn.io/wa-sqlite/dist/wa-sqlite.mjs'
     await sqlite3.exec(db, `SELECT 'Hello, world!'`, (row, columns) => {
       console.log(row);
     });
+    await sqlite3.exec(db, 'SELECT crsql_finalize();');
     await sqlite3.close(db);
 })()
 
